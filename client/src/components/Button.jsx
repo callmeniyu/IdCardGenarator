@@ -1,9 +1,9 @@
 import React from "react"
 
-const Button = () => {
+const Button = ({handleSubmit}) => {
     return (
-        <div className="button">
-            <button className="bg-slate-900 text-white p-2 px-3 rounded-md font-semibold">Generate ID Card</button>
+        <div className="button" onClick={handleSubmit}>
+            <button className="bg-slate-900 text-white text-lg p-2 px-3 rounded-md font-semibold border-none cursor-pointer">Generate ID Card</button>
         </div>
     )
 }
