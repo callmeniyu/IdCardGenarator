@@ -53,7 +53,7 @@ const downloadZipFile = () => {
         })
 
         try {
-            const response = await axios.post("${import.meta.env.VITE_BACKEND_URL}/upload", formData, {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
