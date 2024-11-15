@@ -10,6 +10,7 @@ const UploadSection = () => {
     const [filesArr, setFilesArr] = useState([])
     const [visible, setVisible] = useState(false)
     const toast = useRef(null);
+    console.log("kkkkkkk", import.meta.env.VITE_BACKEND_URL)    
 
     const showSuccess = () => {
         toast.current.show({severity:'success', summary: 'Success', detail:'Your file has been submitted', life: 3000});
@@ -23,9 +24,6 @@ const UploadSection = () => {
             return !prev
         })
     }
-    useEffect(() => {
-        console.log("arrrrrrr", filesArr)
-    }, [filesArr])
     
 const downloadZipFile = () => {
     const url = `http://localhost:3000/download-zip-buffer`;

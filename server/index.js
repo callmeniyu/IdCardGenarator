@@ -48,6 +48,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+app.get('/', (req, res) => { 
+    res.send("Hello")
+})
+
 app.post('/upload', upload.array('document', 10), async (req, res) => {
     await init();
 
