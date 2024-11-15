@@ -23,7 +23,7 @@ const UploadSection = () => {
             return !prev
         })
     }
-    
+    console.log("backk", import.meta.env.VITE_BACKEND_URL)
 const downloadZipFile = () => {
     const url = `${process.env.VITE_BACKEND_URL}/download-zip-buffer`;
     const link = document.createElement('a');
@@ -53,7 +53,7 @@ const downloadZipFile = () => {
         })
 
         try {
-            const response = await axios.post(`${process.env.VITE_BACKEND_URL}/upload`, formData, {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
