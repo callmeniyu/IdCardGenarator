@@ -73,7 +73,7 @@ const downloadZipFile = () => {
     return (
         <div className="uploadsection flex flex-col  items-center ">
                         <Toast ref={toast} className="alert"/>
-            <div className="upload-fields flex gap-10 xs:gap-5 justify-center py-10">
+            <div className="upload-fields xs:flex xs:flex-col  sm:flex-row gap-10  justify-center py-10">
                 <Upload
                     className="border-2 border-gray-500"
                     type="spreadsheet"

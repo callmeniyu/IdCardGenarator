@@ -14,10 +14,6 @@ const Navbar = () => {
                     <p className="text-xs text-green-600">Beta 3.2</p>
                 </div>
             </div>
-            <Link to="/github.com" className="font-semibold flex gap-2 rounded-md bg-white p-2  text-black cursor-pointer">
-                <IoLogoGithub className="text-2xl"/>
-                Source
-            </Link>
         </div>
     )
 }
