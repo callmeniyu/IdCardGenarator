@@ -25,7 +25,7 @@ const UploadSection = () => {
     }
     
 const downloadZipFile = () => {
-    const url = `${import.meta.env.VITE_BACKEND_URL}/download-zip-buffer`;
+    const url = `${process.env.VITE_BACKEND_URL}/download-zip-buffer`;
     const link = document.createElement('a');
     link.href = url;
     link.setAttribute('download', 'IdCards.zip');
@@ -53,7 +53,7 @@ const downloadZipFile = () => {
         })
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
+            const response = await axios.post(`${process.env.VITE_BACKEND_URL}/upload`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
