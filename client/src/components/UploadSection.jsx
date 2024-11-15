@@ -10,7 +10,6 @@ const UploadSection = () => {
     const [filesArr, setFilesArr] = useState([])
     const [visible, setVisible] = useState(false)
     const toast = useRef(null);
-    console.log("kkkkkkk", import.meta.env.VITE_BACKEND_URL)    
 
     const showSuccess = () => {
         toast.current.show({severity:'success', summary: 'Success', detail:'Your file has been submitted', life: 3000});
@@ -26,7 +25,7 @@ const UploadSection = () => {
     }
     
 const downloadZipFile = () => {
-    const url = `http://localhost:3000/download-zip-buffer`;
+    const url = `${import.meta.env.VITE_BACKEND_URL}/download-zip-buffer`;
     const link = document.createElement('a');
     link.href = url;
     link.setAttribute('download', 'IdCards.zip');
@@ -54,7 +53,7 @@ const downloadZipFile = () => {
         })
 
         try {
-            const response = await axios.post("http://localhost:3000/upload", formData, {
+            const response = await axios.post("${import.meta.env.VITE_BACKEND_URL}/upload", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
